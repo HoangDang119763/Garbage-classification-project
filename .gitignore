@@ -1,0 +1,79 @@
+# .gitignore
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+.python-version
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Project specific - Models (không đẩy file .h5 lên git)
+models/
+*.h5
+*.hdf5
+*.weights
+*.pb
+*.pbtxt
+*.ckpt
+*.meta
+*.index
+
+# Data files
+saves/
+data/saves/
+data/history/
+*.json
+*.txt
+!requirements.txt
+!README.md
+
+# Logs
+*.log
+logs/
+
+# Virtual Environment
+venv/
+env/
+.venv/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# PyCharm
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+.history/
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Mac
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# TensorFlow
+*.meta
+*.data-00000-of-00001
+*.index
+checkpoint/
+model.ckpt-*
