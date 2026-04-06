@@ -152,17 +152,17 @@ class GarbageClassifierApp(ctk.CTk):
                                         height=45, 
                                         corner_radius=8,
                                         command=self.upload_image)
-        self.upload_btn.grid(row=0, column=0, padx=5, sticky="ew")
+        self.upload_btn.grid(row=0, column=0,  columnspan=2, padx=5, sticky="ew")
         
-        self.camera_btn = ctk.CTkButton(btn_frame, 
-                                        text="📸 CHỤP ẢNH", 
-                                        font=("Segoe UI", 15, "bold"),
-                                        fg_color=COLORS["accent_purple"], 
-                                        hover_color="#8e44ad",
-                                        height=45, 
-                                        corner_radius=8,
-                                        command=self.open_camera)
-        self.camera_btn.grid(row=0, column=1, padx=5, sticky="ew")
+        # self.camera_btn = ctk.CTkButton(btn_frame, 
+        #                                 text="📸 CHỤP ẢNH", 
+        #                                 font=("Segoe UI", 15, "bold"),
+        #                                 fg_color=COLORS["accent_purple"], 
+        #                                 hover_color="#8e44ad",
+        #                                 height=45, 
+        #                                 corner_radius=8,
+        #                                 command=self.open_camera)
+        # self.camera_btn.grid(row=0, column=0, padx=5, sticky="ew")
         
         # Image preview
         preview_container = ctk.CTkFrame(left, fg_color=COLORS["bg_card"], corner_radius=10)
@@ -419,11 +419,11 @@ class GarbageClassifierApp(ctk.CTk):
             )
     
     def disable_buttons(self):
-        for btn in [self.predict_btn, self.upload_btn, self.camera_btn]:
+        for btn in [self.predict_btn, self.upload_btn]:
             btn.configure(state="disabled")
     
     def enable_buttons(self):
-        for btn in [self.predict_btn, self.upload_btn, self.camera_btn]:
+        for btn in [self.predict_btn, self.upload_btn]:
             btn.configure(state="normal")
     
     def open_camera(self):
